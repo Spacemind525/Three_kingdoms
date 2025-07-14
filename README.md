@@ -54,9 +54,7 @@ Attackers gain more tech during battle at 1 : 1.3 rate
 Example Battle Calculation:
 If an enemy sends 200 troops with 75 military strength and defenders have 600 population:
 
-ini
-Копировать
-Редактировать
+
 damage = 200 + 75 - 50 = 225  
 max_garrison = 30% of 600 = 180  
 battle_damage = 225 - 180 = 45  
