@@ -121,25 +121,27 @@ During a siege, race-specific bonuses apply:
 
 Scholars
 
-Tech growth: +5%
+Population growth: –1%
 
-Population growth: –2%
+Military growth: +1%
+
+Tech growth: +2%
 
 Knights
 
-Population growth: +1%
+Population growth: +2%
 
 Military force: +2%
 
-Tech progress: –3%
+Tech progress: –2%
 
 Trolls
 
-Population growth: +6%
+Population growth: +5%
 
-Military force: –2%
+Military force: –1%
 
-Tech progress: –1%
+Tech progress: –2%
 
 Note: No stat can drop below 0%. If that happens, an additional –1% penalty applies to all growth rates.
 
