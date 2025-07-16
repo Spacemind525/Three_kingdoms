@@ -71,7 +71,7 @@ However:
 
 A kingdom can't be attacked if it was attacked within the last 7 turns, unless it initiated an attack itself.
 
-A siege can last up to 50 turns, after which the attacking army dies from exhaustion.
+A siege can last up to 20 turns, after which the attacking army dies from exhaustion.
 
 The third (non-involved) kingdom may only attack the aggressor, not the defender.
 

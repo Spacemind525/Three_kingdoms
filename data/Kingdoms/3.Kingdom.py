@@ -1,3 +1,4 @@
+import Battle
 
 
 class Kingdom:
@@ -9,7 +10,7 @@ class Kingdom:
         self.name = name
         self.hp = hp
         self.defense = defense
-        self.population = 100
+        self.population = 400
         self.force = 10
         self.tech = 0
         self.food = 0
@@ -20,7 +21,14 @@ class Kingdom:
         self.buildings = []
 
     def grow(self):
-        pop_bonus, force_bonus, tech_bonus = self.get_grow_bonus()
+        base_pop_bonus, base_force_bonus, base_tech_bonus = self.get_grow_bonus()
+        siege_bonus = self.get_siege_bonus() if self.siege_turns > 0 else (0, 0, 0)
+        building_bonus = self.get_building_bonus()
+
+        pop_bonus = base_pop_bonus + siege_bonus[0] + building_bonus[0]
+        force_bonus = base_force_bonus + siege_bonus[0] + building_bonus[0]
+        tech_bonus = base_tech_bonus + siege_bonus[0] + building_bonus[0]
+
         self.population = int(self.population * (1 + pop_bonus / 100))
         self.force = int(self.force * (1 + force_bonus / 100))
         self.tech = int(self.tech * (1 + tech_bonus / 100))
