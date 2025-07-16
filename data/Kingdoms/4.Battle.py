@@ -3,7 +3,12 @@ from Kingdoms import Kingdom
 
 def attack(attacker: Kingdom, defender: Kingdom):
     #Attacker preparing to attack
-    sent_percent = random.uniform(0.3, 0.6)
+    if attacker.population >= 1000:
+        sent_percent = 0.6
+    elif attacker.population >= 700:
+        sent_percent = random.uniform(0.4, 0.5)
+    else:
+        sent_percent = random.uniform(0.3, 0.4)
     sent_people = int(attacker.population * sent_percent)
     attacker.population -= sent_people
     attacker.force -= int(sent_people * 0.1)
