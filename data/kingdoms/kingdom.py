@@ -1,4 +1,4 @@
-import Battle
+import battle
 
 
 class Kingdom:
@@ -51,6 +51,11 @@ class Kingdom:
             current_turn => 5 and
             current_turn - enemy.last_attacked_turn >= 7
         )
+
+    def check_building_status(self):
+        if self.hp < BUILDING_DESTROY_THRESHOLD and self.buildings:
+            self.buildings.pop()
+            self.defense = ()
 
 class ScholarsKingdom(Kingdom):
     def get_grow_bonus(self):
