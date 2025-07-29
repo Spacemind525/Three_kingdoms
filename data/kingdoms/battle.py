@@ -1,6 +1,7 @@
 import random
-from Kingdoms import Kingdom
-
+from kingdoms import kingdom
+from kingdoms import constants_player
+#Behavior AI in Battle
 def attack(attacker: Kingdom, defender: Kingdom):
     #Attacker preparing to attack
     if attacker.population >= 1000:
@@ -27,3 +28,7 @@ def attack(attacker: Kingdom, defender: Kingdom):
     #increase Tech
     attacker.tech += int(damage * 1.3)
     defender.tech += int(damage * 0.6)
+
+
+def steal_resources(attacker, defender, units_sent):
+    if defender.hp <= CASTLE_INITIAL_HP * RESOURCE_THEFT_THRESHOLD
